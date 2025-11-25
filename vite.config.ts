@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       // Gitee Pages 部署路径前缀，仓库名若不同请改为 '/你的仓库名/'
-      base: '/eduword/',
+      base: '/',
       server: {
         port: 3000,
         host: '0.0.0.0',

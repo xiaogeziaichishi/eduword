@@ -37,7 +37,7 @@ let localDictLoader: Promise<LocalDictionary> | null = null;
 
 export const loadLocalDictionary = (): Promise<LocalDictionary> => {
   if (!localDictLoader) {
-    localDictLoader = fetch("/word_translations.csv")
+    localDictLoader = fetch(`${import.meta.env.BASE_URL ?? "/"}word_translations.csv`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to load local dictionary");
         return res.text();

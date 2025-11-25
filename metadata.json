@@ -1,0 +1,5 @@
+{
+  "name": "EduWord Master",
+  "description": "An interactive English vocabulary learning tool featuring Youdao audio pronunciation, Gemini-powered definitions, and AI image generation.",
+  "requestFramePermissions": []
+}

@@ -13,7 +13,7 @@ interface WordListProps {
 
 const WordList: React.FC<WordListProps> = ({ title, words, count, onSelect, selectedWord, isHistory = false }) => {
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
+    <div className="flex flex-col h-full min-h-0 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
       <div className="p-4 border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
         <h2 className="text-lg font-semibold text-slate-600 dark:text-slate-300">
           {title} <span className="text-sm font-normal text-slate-400">({count})</span>

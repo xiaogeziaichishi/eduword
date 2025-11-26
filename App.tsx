@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const [initialList, setInitialList] = useState<string[]>(INITIAL_WORDS);
   
   // Mobile Tab State: 'candidates' | 'main' | 'history'
-  const [activeMobileTab, setActiveMobileTab] = useState<'candidates' | 'main' | 'history'>('candidates');
+  const [activeMobileTab, setActiveMobileTab] = useState<'candidates' | 'main' | 'history'>('main');
 
   // Initialize Theme
   useEffect(() => {
@@ -199,8 +199,8 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Layout */}
-      <main className="flex-1 overflow-hidden relative">
-        <div className="h-full w-full max-w-[1600px] mx-auto md:p-6 md:grid md:grid-cols-12 md:gap-6">
+      <main className="flex-1 min-h-0 overflow-hidden relative">
+        <div className="h-full min-h-0 w-full max-w-[1600px] mx-auto md:p-6 md:grid md:grid-cols-12 md:gap-6">
           
           {/* Mobile View: Render based on active tab */}
           <div className="md:hidden h-full pb-16"> 
@@ -244,7 +244,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Desktop View: 3-Column Layout */}
-          <div className="hidden md:block col-span-3 lg:col-span-2 h-full min-w-[200px]">
+          <div className="hidden md:block col-span-3 lg:col-span-2 h-full min-h-0 min-w-[200px]">
             <WordList 
               title="待选" 
               count={candidateWords.length} 
@@ -254,7 +254,7 @@ const App: React.FC = () => {
             />
           </div>
 
-          <div className="hidden md:block col-span-6 lg:col-span-8 h-full">
+          <div className="hidden md:block col-span-6 lg:col-span-8 h-full min-h-0">
             <MainStage 
               currentWord={currentWord}
               isLoading={isLoading}
@@ -265,7 +265,7 @@ const App: React.FC = () => {
             />
           </div>
 
-          <div className="hidden md:block col-span-3 lg:col-span-2 h-full min-w-[200px]">
+          <div className="hidden md:block col-span-3 lg:col-span-2 h-full min-h-0 min-w-[200px]">
             <WordList 
               title="已选" 
               count={historyWords.length} 

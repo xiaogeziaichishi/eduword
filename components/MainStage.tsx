@@ -48,10 +48,10 @@ const MainStage: React.FC<MainStageProps> = ({
   }
 
   return (
-    <div className="h-full flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden relative">
+    <div className="h-full min-h-0 flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden relative">
       
       {/* Content Area */}
-      <div className="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col items-center justify-center relative scroll-smooth">
+      <div className="flex-1 min-h-0 overflow-y-auto p-4 md:p-8 flex flex-col items-center justify-center relative scroll-smooth">
         {isLoading ? (
           <div className="flex flex-col items-center gap-4 text-slate-400 animate-pulse">
             <Loader2 className="animate-spin" size={48} />
